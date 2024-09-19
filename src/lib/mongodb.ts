@@ -12,9 +12,10 @@ interface mongodbCache {
   conn: mongoose.Mongoose | null;
   promise: Promise<mongoose.Mongoose> | null;
 }
- declare global {
+
+declare global {
   let mongoose: mongodbCache;
-} 
+}
 let cached = global.mongoose;
 
 if (!cached) {

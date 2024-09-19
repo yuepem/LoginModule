@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import AuthForm from "@/components/AuthForm";
 
-
 const Signup: React.FC = () => {
   const [message, setMessage] = useState("");
   const [isSuccessful, setIsSuccessful] = useState(false);
@@ -42,7 +41,14 @@ const Signup: React.FC = () => {
             </p>
           </>
         ) : (
-          <AuthForm mode="Sign up" onSubmit={handleSignup} />
+          <>
+            <AuthForm mode="Sign up" onSubmit={handleSignup} />
+            <Link href="/password/login">
+              <p className="text-center text-stone-800 font-bold underline py-4">
+                Already have account? Login
+              </p>
+            </Link>
+          </>
         )}
 
         {message && (

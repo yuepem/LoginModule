@@ -25,7 +25,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode, onSubmit, resetForm }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 ">
       <h2 className="text-2xl font-bold mb-4 text-center">{mode}</h2>
       <div>
         <label className="block text-gray-700 dark:text-gray-300">Email</label>
@@ -49,7 +49,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode, onSubmit, resetForm }) => {
       </div>
      <button
         type="submit"
-        className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+        className="w-full py-2 bg-stone-800 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
         >{mode}
      </button>
     </form>
