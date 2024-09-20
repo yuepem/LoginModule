@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import {  NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/mongodb";
@@ -51,7 +51,7 @@ const sendSms = async (phoneNumber: string, otp: string) => {
   });
 };
 
-export default async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   try {
     // Connect to MongoDB
     await dbConnect();
